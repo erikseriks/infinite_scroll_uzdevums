@@ -1,0 +1,20 @@
+services:
+
+  frontend:
+    hostname: frontend
+    build:
+      context: ./frontend
+      target: develop-stage
+    volumes:
+      - ./frontend:/app
+    command: /bin/sh -c "yarn && yarn dev"
+    restart: unless-stopped
+
+  proxy:
+    depends_on:
+      - frontend
+    image: nginx:stable-alpine
+    volumes:
+      - ./proxy/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80
