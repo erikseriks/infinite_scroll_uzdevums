@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import ErrorTopBanner from '@/components/ErrorTopBanner.vue'
+import LoadingIndicator from '@/components/LoadingIndicator.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">List</RouterLink>
-      </nav>
-    </div>
-  </header>
-
+  <error-top-banner />
   <RouterView />
+  <loading-indicator />
 </template>
