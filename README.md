@@ -1,13 +1,13 @@
-# Testa uzdevums - Ēriks Ķirsis
+# Test task
 
  - Vue 3 SPA
  - Nginx
  - Rick & Morty API
 
-## Uzstādīšana 
+## Setup 
 `docker-compose up`
 
 [links](http://localhost)
 
-### Izstrādes vide (node Vite dev ws)
+### Dev env (node Vite dev ws)
 `docker-compose -f docker-compose.dev.yaml up --build`
